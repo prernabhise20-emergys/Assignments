@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <style>
+        .alata-regular {
+            font-family: "Alata", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .josefin-sans-hero-content {
+            font-family: "Josefin Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        /* .attribution {
+            font-size: 11px;
+            text-align: center;
+            justify-content: end;
+            position: absolute;
+            top: 143rem;
+            left: 490px;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: absolute;
+            top: 60px;
+            padding: 0px 0px 0px 100px;
+            color: white;
+            z-index: 10;
+            width: 85%;
+            left: 100px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+
+        .logo img {
+            position: relative;
+            max-height: 30px;
+            left: 0px;
+        }
+
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links ul li a {
+            font-weight: 300;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: "ALATA";
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('images/desktop/image-hero.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            padding: 30px 30px 30px 18px;
+            position: absolute;
+            border: 2px solid white;
+            width: 523px;
+            height: 217px;
+            top: 230px;
+            left: 190px;
+            font-family: "Josefin Sans", serif;
+            font-weight: 200;
+        }
+
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            padding: 7rem 2rem;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            position: relative;
+            left: 12%;
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .content1 {
+            position: relative;
+            top: 154px;
+            height: 277px;
+            right: 127px;
+            flex: 1;
+            padding: 2rem;
+            background-color: white;
+            max-width: 38%;
+            z-index: 5;
+        }
+
+        .content1 h1 {
+            padding: 65px 0px 22px 67px;
+            font-size: 38px;
+            font-family: "Josefin Sans", serif;
+            font-weight: 300;
+        }
+
+        .content1 p {
+            padding: 9px 0px 2px 66px;
+            font-family: "Alata", sans-serif;
+            font-size: 11.4px;
+            color: gray;
+            position: relative;
+            top: -10px;
+        }
+
+        .bottom-section {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            font-size: 23px;
+            font-family: "Josefin Sans", serif;
+            font-weight: 300;
+            width: 75%;
+            left: 142px;
+        }
+
+        .bottom-section h2 {
+            font-weight: 300;
+        }
+
+        .button {
+            font-size: 11px;
+            text-decoration: none;
+            font-family: "Alata", sans-serif;
+            display: inline-block;
+            padding: 0.70rem 1rem;
+            padding-left: 1rem;
+            color: black;
+            border: 1px solid black;
+            text-decoration: none;
+            font-weight: 100;
+            width: 110px;
+            height: 32px;
+            position: relative;
+            right: -11px;
+            padding-left: -52px;
+            padding-right: 21px;
+            text-align: center;
+            font-size: 10px;
+            padding-top: 7px;
+        }
+
+        .button:hover {
+            text-decoration: none;
+            background-color: black;
+            color: white;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0px 0px 0px 0px;
+            max-width: 920px;
+            margin: 0 auto;
+            position: relative;
+            left: -11px;
+        }
+
+        .grid-column {
+            padding: 0px 12px 0px 12px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .grid-column img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .grid-column h3 {
+            position: relative;
+            top: -100px;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            color: #444;
+        }
+
+        .grid-column:hover {
+            cursor: pointer;
+            filter: blur(3px);
+        }
+
+        footer {
+            position: relative;
+            top: 120px;
+            height: 7rem;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0px 50px;
+        }
+
+        .footer-logo img {
+            width: 140px;
+            height: auto;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-social a img {
+            width: 25px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0px 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            font-family: "Alata", sans-serif;
+            font-weight: 180;
+            font-size: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer-rights {
+            color: gray;
+            font-family: "Josefin Sans", serif;
+            font-weight: 400;
+        }
+
+        .imaggridmamelabling {
+            position: relative;
+            top: -80px;
+            width: 110px;
+            left: 21px;
+            color: white;
+            font-family: "Josefin Sans", serif;
+            font-size: 20px;
+            font-weight: 300;
+
+        }
+
+        .hidden1 {
+            visibility: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+                justify-content: end;
+                position: absolute;
+                top: 188rem;
+                left: 0px;
+                width: 100%;
+            }
+
+            header {
+                top: 20px;
+                padding: 0px 0px 0px 20px;
+                width: 95%;
+                left: 0px;
+            }
+
+            .hero-text h1 {
+                top: 15rem;
+                text-align: center;
+                font-size: 2.0rem;
+                border: 2px solid white;
+                width: 272px;
+                height: 162px;
+                left: 16px;
+                font-family: "Josefin Sans", serif;
+                font-weight: 300;
+                padding: 17px 192px 30px 15px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                height: 350px;
+                top: 100%;
+                left: 0;
+                width: 105%;
+                background-color: rgba(0, 0, 0, 0.9);
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .navlinkli {
+                padding: 18px;
+            }
+
+            #menu-toggle:checked~.nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .two-column {
+                flex-direction: column;
+                align-items: center;
+                padding: 48px 0px 0px 0px;
+            }
+
+            .image-box {
+                position: relative;
+                left: 0px;
+                max-width: 100%;
+                padding: 1rem;
+            }
+
+            .image-box img {
+                width: 100%;
+                height: auto;
+            }
+
+            .bottom-section h2 {
+                font-weight: 300;
+                font-size: 29px;
+            }
+
+            .content1 {
+                position: relative;
+                top: 0px;
+                height: 94px;
+                left: 2px;
+                background-color: white;
+                max-width: 90%;
+                z-index: 5;
+            }
+
+
+            .content1 h1 {
+                padding: 0px 0px 23px 17px;
+                font-size: 24px;
+                font-family: "Josefin Sans", serif;
+                font-weight: 300;
+            }
+
+            .content1 p {
+                padding: 0px 0px 0px 0px;
+                font-family: "Alata", sans-serif;
+                font-size: 11.5px;
+                color: gray;
+                text-align: center;
+                width: 13rem;
+                position: relative;
+                right: -9px;
+            }
+
+            .bottom-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+
+
+            .bottom-section {
+                position: relative;
+                width: 100%;
+                left: 0px;
+            }
+
+            .button {
+                position: relative;
+                width: 122px;
+                left: 110px;
+                align-items: center;
+                z-index: 150;
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+                left: 1px;
+                width: 295px;
+            }
+
+            footer {
+                position: relative;
+                top: 120px;
+                height: 17rem;
+                background-color: black;
+                color: white;
+                padding: 20px;
+            }
+
+            .footer-rights {
+                color: gray;
+                font-family: "Josefin Sans", serif;
+                font-weight: 400;
+                font-size: 10px;
+            }
+
+            .grid-column {
+                padding: 0PX 12PX 0PX 12PX;
+            }
+
+            .grid-column img {
+                margin: 0 auto 1rem;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-links {
+                position: relative;
+                top: -52px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-social {
+                position: relative;
+                top: 155px;
+            }
+
+            .imaggridmamelabling {
+                left: 10px;
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+
+            .hidden1 {
+                visibility: visible;
+            }
+        }
+
+
+        @media (min-width: 769px) and (max-width: 1224px) {
+            .images {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+        }
+
+        @media (min-width: 769px) and (max-width: 1224px) {
+            .content1 {
+                top: 120px;
+                height: 280px;
+                right: 75px;
+                flex: 1;
+                padding: 2rem;
+                max-width: 38%;
+            }
+
+            .content1 h1 {
+                padding: 14px 0px 13px 46px;
+                font-size: 18px;
+
+            }
+
+            .content1 p {
+                padding: 9px 0px 2px 49px;
+                font-size: 10px;
+                position: relative;
+                top: -8px;
+            }
+
+            .hidden1 {
+                visibility: visible;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                position: relative;
+                left: 18rem;
+            }
+        }
+
+        @media (min-width: 339px) and (max-width: 768px) {
+            .content1 p {
+                padding: 0px 0px 0px 0px;
+                font-family: "Alata", sans-serif;
+                font-size: 11.5px;
+                color: gray;
+                text-align: center;
+                width: 13rem;
+                position: relative;
+                right: -65px;
+            }
+
+            .content1 h1 {
+                padding: 0px 0px 23px 40px;
+                font-size: 24px;
+                font-family: "Josefin Sans", serif;
+                font-weight: 300;
+            }
+
+            .hidden1 {
+                visibility: visible;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                position: relative;
+                left: 12rem;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="images/logo.svg" alt="Logo"></div>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            <ul class="nav-links">
+                <li class="navlinkli"><a href="#">About</a></li>
+                <li class="navlinkli"><a href="#">Careers</a></li>
+                <li class="navlinkli"><a href="#">Events</a></li>
+                <li class="navlinkli"><a href="#">Products</a></li>
+                <li class="navlinkli"><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+        </div>
+    </section>
+
+    <div class="two-column">
+        <div class="image-box">
+            <img src="images/desktop/image-interactive.jpg" alt="Interactive VR">
+        </div>
+        <div class="content1">
+            <h1>THE LEADER IN INTERACTIVE VR </h1>
+            <p>
+                Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the
+                best companies around the globe. Our award-winning creations have transformed businesses through digital
+                experiences that bind to their brand.
+            </p>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <h2>OUR CREATIONS</h2>
+        <a href="#" class="button hidden">S&nbsp;E&nbsp;E&nbsp; A&nbsp;L&nbsp;L</a>
+    </div>
+
+    <div class="images">
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-deep-earth.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-deep-earth.jpg" alt="Image 1">
+                <p class="imaggridmamelabling">DEEP EARTH</p>
+            </picture>
+
+        </div>
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-night-arcade.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-night-arcade.jpg" alt="Image 2">
+                <P class="imaggridmamelabling">NIGHT ARCADE</P>
+            </picture>
+
+        </div>
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-soccer-team.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-soccer-team.jpg" alt="Image 3">
+                <P class="imaggridmamelabling">SOCCER TEAM VR</P>
+            </picture>
+
+        </div>
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-grid.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-grid.jpg" alt="Image 4">
+                <P class="imaggridmamelabling">THE &nbsp;&nbsp;&nbsp;GRID</P>
+            </picture>
+
+        </div>
+
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-from-above.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-from-above.jpg" alt="Image 1">
+                <P class="imaggridmamelabling">FROM UP ABOVE VR</P>
+            </picture>
+
+        </div>
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-pocket-borealis.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-pocket-borealis.jpg" alt="Image 2">
+                <P class="imaggridmamelabling">POCKET BOREALIS</P>
+            </picture>
+
+        </div>
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-curiosity.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-curiosity.jpg" alt="Image 3">
+                <P class="imaggridmamelabling">THE CURIOSITY</P>
+            </picture>
+
+        </div>
+        <div class="grid-column">
+            <picture>
+                <source srcset="images/mobile/image-fisheye.jpg" media="(max-width: 768px)">
+                <img src="images/desktop/image-fisheye.jpg" alt="Image 4">
+                <P class="imaggridmamelabling">MAKE IT FISHEYE</P>
+            </picture>
+
+        </div>
+    </div>
+    <a href="#" class="button hidden1">S&nbsp;E&nbsp;E&nbsp; A&nbsp;L&nbsp;L</a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+                    <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <nav class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Events</a>
+                    <a href="#">Products</a>
+                    <a href="#">Support</a>
+                </nav>
+                <div class="footer-rights">
+                    &copy; 2021 Loopstudios. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Prerna Bhise</a>.
+    </div> -->
+</body>
+
+</html>
