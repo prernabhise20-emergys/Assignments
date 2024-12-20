@@ -2,27 +2,40 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <title>
         Interior Design Services
     </title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CO+Guides&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CO+Guides&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <header>
         <h1>Prerna's Interior Design Service</h1>
         <nav>
-            <ul>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            <ul class="nav-links">
                 <li><a href="#Home">Home</a></li>
-                <li><a href="#Features">Features</a></li>
-                <li><a href="#Pricing">Pricing</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
 
@@ -34,13 +47,12 @@
             <p>" We Turn Houses Into Homes "</p>
         </div>
         <figure>
-            <img src="./images/main_image.jpg">
-            <img src="./images/c1.jpg">
-            <img src="./images/full_home_interior.jpg">
-            <!-- <img src="./images/luxury_interior.jpg">  -->
+            <img src="./images/main_image.jpg" alt="image1">
+            <img src="./images/s.jpg" alt="image2">
+            <img src="./images/full_home_interior.jpg" alt="image3">
         </figure>
     </div>
-    <section id="Features">
+    <section id="features">
         <h2>Our Features</h2>
         <div class="features">
             <div class="f1">
@@ -51,50 +63,53 @@
             <div class="f1">
                 <img src="./images/lighting.jpg">
                 <h3>Lighting Design</h3>
-                <p>We deliver personalize interior design solutions to your needs.</p>
+                <p>Understanding the science behind lighting and its impact on a space can help homeowners and designers
+                    create a functional and inviting atmosphere in any room.</p>
             </div>
             <div class="f1">
                 <img src="./images/pooja_space.jpg">
                 <h3>Pooja Space</h3>
-                <p>We deliver personalize interior design solutions to your needs.</p>
+                <p>Our team has designed all kinds of Pooja rooms, from staunchly traditional Indian Pooja rooms to
+                    contemporary meditation-centric spaces.</p>
             </div>
             <div class="f1">
                 <img src="./images/kitchen.jpeg">
                 <h3>Kitchen Design</h3>
-                <p>We deliver personalize interior design solutions to your needs.</p>
+                <p>There are different types of kitchen design styles, just as there are for the rest of your home.</p>
             </div>
             <div class="f1">
-                <img src="./images/greenery_design.jpg">
+                <img src="./images/bedroom.jpg">
                 <h3>Bedroom Design</h3>
-                <p>We deliver personalize interior design solutions to your needs.</p>
+                <p>Our carefully-curated master bedroom designs come in a variety of styles, colour schemes and decor
+                    ideas - all of which can be customised to your taste.</p>
             </div>
             <div class="f1">
                 <img src="./images/door.jpg">
                 <h3>Door Design</h3>
-                <p>We deliver personalize interior design solutions to your needs.</p>
+                <p>Transform your home with stunning door designs that perfectly blend style and function.</p>
             </div>
         </div>
     </section>
-    <section id="Pricing">
+    <section id="pricing">
         <h1>Our Pricing Plan</h1>
         <div class="pricing">
             <div class="p1">
                 <h3>Basic Plan</h3>
-                <p class="price">11111</p>
-                <p>1 Room Design</p>
+                <p class="price">3,00,000/-</p>
+                <p>2 Room Design</p>
                 <p>Basic Furnitre Setup</p>
                 <p>Email Support</p>
             </div>
             <div class="p1">
                 <h3>Standard Plan</h3>
-                <p class="price">222222</p>
-                <p>3 Room Design</p>
+                <p class="price">6,50,000/-</p>
+                <p>4 Room Design</p>
                 <p>Furnitre Setup & Lighting</p>
                 <p>Priority Support</p>
             </div>
             <div class="p1">
                 <h3>Premium Plan</h3>
-                <p class="price">333333</p>
+                <p class="price">10,00,000/-</p>
                 <p>Full House Design</p>
                 <p>Premium Furnitre Setup & Lighting</p>
                 <p>24/7 Support</p>
@@ -106,7 +121,7 @@
         <div class="testimonials">
             <div class="t1">
                 <h4>Priya</h4>
-                <p>I am really impressed with Prerna Interior Design Service.. they have very creative and beautiful
+                <p>I am really impressed with Prerna's Interior Design Service.. they have very creative and beautiful
                     design. They always come
                     up with innovative ideas. Prerna made our dream house a reality. Thank you !! Prerna, YOU ROCK
                     !!</p>
@@ -118,12 +133,18 @@
             </div>
             <div class="t1">
                 <h4>Bhavna</h4>
-                <p>I got the best Interior Designer in Pune. Prerna Interior Design Service offered me the best layout
+                <p>I got the best Interior Designer in Pune. Prerna's Interior Design Service offered me the best layout
                     along with the best
                     designs for my office space. I would recommend Prerna Interior Design Service for commercial
                     interior designing services
                     in Pune.</p>
             </div>
+            <div class="t1">
+                <h4>Sudhir</h4>
+                <p> Prerna's Interior Design Service has given us very space-saving designs & cost-effective means to
+                    furnish our office & training infra. I highly recommend their work!!</p>
+            </div>
+
         </div>
     </section>
     <section id="contact">
@@ -131,15 +152,26 @@
         <div class="contact">
             <div class="c1">
                 <form>
-                    <input type="text" placeholder="Enter Your Name" required>
-                    <input type="email" placeholder="Enter your EmailID" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <input type="text" placeholder="Enter Your Full Name" required>
+                    <input type="number" placeholder="Contact Number" required>
+                    <input type="email" placeholder="EmailID" required>
+                    <input type="text" placeholder="Country Name" required>
+                    <textarea rows="5" placeholder="Comments or Questions" required></textarea>
+                    <button type="submit">Send</button>
                 </form>
             </div>
         </div>
 
     </section>
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com/"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+            <a href="https://x.com/"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+            <a href="https://in.pinterest.com/"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+            <a href="https://www.instagram.com/"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+        </div>
+        <p>&copy; Prerna's Interior Design Service. All Right Reserved.</p>
+    </footer>
 </body>
 
 </html>
