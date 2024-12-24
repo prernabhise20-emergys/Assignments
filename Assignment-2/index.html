@@ -4,27 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <title>
-        Interior Design Services
-    </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
 
+    <title>Interior Design Services</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Satisfy&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
-    <header>
-        <h1>Prerna's Interior Design Service</h1>
+    <div class="navbar top">
+        <div class="nav-main">
+            <div class="nav-logo"><a href="#"><img src="images/l.webp" alt="lOGO" width="100%" height="100%"></a>
+            </div>
+            <div class="brand">
+                <div class="brand-name"><a href="#">Interior Design Service</a></div>
+                <div class="brand-quote"><a class="brand-quote" href="#">We turn houses... into homes</a></div>
+            </div>
+        </div>
         <nav>
             <input type="checkbox" id="menu-toggle" />
             <label for="menu-toggle" class="hamburger">
@@ -32,146 +32,247 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </label>
-            <ul class="nav-links">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
+            <div class="nav-items" id="navitems">
+                <div><a class="nav-links" href="#">Home</a></div>
+                <div><a class="nav-links" href="#features">Features</a></div>
+                <div><a class="nav-links" href="#prices">Prices</a></div>
+                <div><a class="nav-links" href="#testimonials">Testimonials</a></div>
+                <div><a class="nav-links" href="#contacts">Contact</a></div>
+            </div>
         </nav>
-    </header>
-    <div id="slider">
-        <div class="text">
-            <p>" We Turn Houses Into Homes "</p>
-        </div>
-        <figure>
-            <img src="./images/main_image.jpg" alt="image1">
-            <img src="./images/s.jpg" alt="image2">
-            <img src="./images/full_home_interior.jpg" alt="image3">
-        </figure>
     </div>
+
+    <div class="main-background home" id="nav">
+        <div class="matter">
+            <h1>Interior Design Services</h1>
+            <p> Unlock the Art of Living -
+                Interior Design Services Awaits Your Imagination</p>
+        </div>
+    </div>
+
     <section id="features">
-        <h2>Our Features</h2>
-        <div class="features">
-            <div class="f1">
-                <img src="./images/c1.jpg">
-                <h3>Custom Design</h3>
-                <p>We deliver personalize interior design solutions to your needs.</p>
+
+        <div class="heading">Features</div>
+        <div class="main">
+            <div id="kitchen" class="row">
+                <div class="image"><img src="images/kitchen/kitchen2.png" alt="Carpentry"></div>
+                <div class="content">
+                    <h3>Kitchen</h3>
+                    <p>
+                        There are different types of kitchen design styles, just as there are for the rest of your home.
+                    </p>
+                </div>
             </div>
-            <div class="f1">
-                <img src="./images/lighting.jpg">
-                <h3>Lighting Design</h3>
-                <p>Understanding the science behind lighting and its impact on a space can help homeowners and designers
-                    create a functional and inviting atmosphere in any room.</p>
+
+            <div id="ceiling" class="row">
+                <div class="content">
+                    <h3>False Ceilings</h3>
+                    <p>
+                        Look up, for that is where miracles happen - in the sky and on the ceiling.
+                    </p>
+                </div>
+                <div class="image"><img src="images/ceiling/c1.png" alt="wallpaper"></div>
             </div>
-            <div class="f1">
-                <img src="./images/pooja_space.jpg">
-                <h3>Pooja Space</h3>
-                <p>Our team has designed all kinds of Pooja rooms, from staunchly traditional Indian Pooja rooms to
-                    contemporary meditation-centric spaces.</p>
+
+            <div id="living-room" class="row">
+                <div class="image"><img src="images/livingroom/livingroom3.png" alt="wallpaper"></div>
+                <div class="content">
+                    <h3>Living Room</h3>
+                    <p>
+                        ur carefully-curated designs come in a variety of styles, colour schemes and decor
+                        ideas - all of which can be customised to your taste.
+                    </p>
+                </div>
             </div>
-            <div class="f1">
-                <img src="./images/kitchen.jpeg">
-                <h3>Kitchen Design</h3>
-                <p>There are different types of kitchen design styles, just as there are for the rest of your home.</p>
+
+            <div id="pooja-space" class="row">
+                <div class="content">
+                    <h3>Pooja Space</h3>
+                    <p>
+                        Our team has designed all kinds of Pooja rooms, from staunchly traditional Indian Pooja rooms to
+                        contemporary meditation-centric spaces. </p>
+                </div>
+                <div class="image"><img src="images/pooja_space.jpg" alt="wallpaper"></div>
             </div>
-            <div class="f1">
-                <img src="./images/bedroom.jpg">
-                <h3>Bedroom Design</h3>
-                <p>Our carefully-curated master bedroom designs come in a variety of styles, colour schemes and decor
-                    ideas - all of which can be customised to your taste.</p>
+
+
+
+            <div id="green-design" class="row">
+                <div class="image"><img src="images/greenery_design.jpg" alt="wallpaper"></div>
+                <div class="content">
+                    <h3>Greenery Design</h3>
+                    <p>
+                        Transform your home with stunning greenery designs that perfectly blend style and function.
+                    </p>
+                </div>
             </div>
-            <div class="f1">
-                <img src="./images/door.jpg">
-                <h3>Door Design</h3>
-                <p>Transform your home with stunning door designs that perfectly blend style and function.</p>
+
+
+            <div id="painting" class="row">
+                <div class="content">
+                    <h3>Painting</h3>
+                    <p>
+                        Colors are the voices of the walls, whispering stories os emotions and dreams.
+                    </p>
+                </div>
+                <div class="image"><img src="images/painting/painting.png" alt="wallpaper"></div>
+
+            </div>
+
+            <div id="wallpapers" class="row">
+                <div class="image"><img src="images/wallpaper/wallpaper.jpg" alt="wallpaper"></div>
+                <div class="content">
+                    <h3>Wallpapers</h3>
+                    <p>
+                        Your home should tell the story of who you are and be a collection of what you love.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="content">
+                    <h3>Wall Paneling</h3>
+                    <p>
+                        The artful embrace of textures, weaving tales of warmth and refinement, one panel at a time.
+                    </p>
+                </div>
+                <div class="image"><img src="images/wall-panelling/wp1.png" alt="wallpaper"></div>
+            </div>
+
+            <div id="wallpapers" class="row">
+                <div class="image"><img src="images/lighting.jpg" alt="wallpaper"></div>
+                <div class="content">
+                    <h3>Lighting Design</h3>
+                    <p>
+                        Understanding the science behind lighting and its impact on a space can help homeowners and
+                        designers
+                        create a functional and inviting atmosphere in any room. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content">
+                    <h3>Bedroom</h3>
+                    <p>
+                        Our carefully-curated master bedroom designs come in a variety of styles, colour schemes and
+                        decor
+                        ideas - all of which can be customised to your taste. </p>
+                </div>
+                <div class="image"><img src="images/bedroom/bedroom2.png" alt="wallpaper"></div>
             </div>
         </div>
+
     </section>
-    <section id="pricing">
-        <h1>Our Pricing Plan</h1>
-        <div class="pricing">
-            <div class="p1">
-                <h3>Basic Plan</h3>
-                <p class="price">3,00,000/-</p>
-                <p>2 Room Design</p>
-                <p>Basic Furnitre Setup</p>
-                <p>Email Support</p>
+    <section id="prices">
+        <div class="heading">Prices</div>
+        <div class="steps">
+            <div>
+                <div class="step1">
+                    <h4 class="pricesfirstsection"><a href="#"><b>Basic Plan</b></a></h4>
+                    <h4 class="pricesfirstsection" id="price"><img src="images/rupees.png"><a>3,00,000/-</a></h4>
+                    <h4 class="pricesfirstsection"><a href="#">2 Room Design
+                            Basic Furnitre Setup
+                            Email Support</a></h4>
+                </div>
             </div>
-            <div class="p1">
-                <h3>Standard Plan</h3>
-                <p class="price">6,50,000/-</p>
-                <p>4 Room Design</p>
-                <p>Furnitre Setup & Lighting</p>
-                <p>Priority Support</p>
+            <div>
+                <div class="step2">
+                    <h4 class="pricesfirstsection"><a href="#"><b>Standard Plan</b></a></h4>
+                    <h4 class="pricesfirstsection" id="price"><img src="images/rupees.png"><a>6,50,000/-</a></h4>
+                    <h4 class="pricesfirstsection"><a href="#">4 Room Design
+
+                            Furnitre Setup & Lighting
+
+                            Priority Support</a></h4>
+                </div>
             </div>
-            <div class="p1">
-                <h3>Premium Plan</h3>
-                <p class="price">10,00,000/-</p>
-                <p>Full House Design</p>
-                <p>Premium Furnitre Setup & Lighting</p>
-                <p>24/7 Support</p>
+            <div>
+
+                <div class="step3">
+                    <h4 class="pricesfirstsection"><a href="#"><b>Premium Plan</b></a></h4>
+                    <h4 class="pricesfirstsection" id="price"><img src="images/rupees.png"><a>10,00,000/-</a></h4>
+                    <h4 class="pricesfirstsection"><a href="#">Full House Design
+
+                            Premium Furnitre & Lighting
+
+                            24/7 Support</a></h4>
+                </div>
+            </div>
+            <div>
+                <div class="step4">
+                    <h4 class="pricesfirstsection"><a href="#"><b>Golden Plan</b></a></h4>
+                    <h4 class="pricesfirstsection" id="price"><img src="images/rupees.png"><a>15,00,000/-</a></h4>
+                    <h4 class="pricesfirstsection"><a href="#">Full 2 houses Design
+                            Premium Furnitre & Lighting
+                            24/7 Support</a></h4>
+                </div>
             </div>
         </div>
+
     </section>
+
+
+
+
     <section id="testimonials">
-        <h1>What our clients say</h1>
-        <div class="testimonials">
-            <div class="t1">
-                <h4>Priya</h4>
+        <h2 class="heading">What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="images/girls1.jpg" alt="Client 1">
+                <h3>Priya</h3>
                 <p>I am really impressed with Prerna's Interior Design Service.. they have very creative and beautiful
-                    design. They always come
-                    up with innovative ideas. Prerna made our dream house a reality. Thank you !! Prerna, YOU ROCK
-                    !!</p>
+                    design. They always come up with innovative ideas. Prerna made our dream house a reality. Thank you
+                    !! Prerna, YOU ROCK !!</p>
             </div>
-            <div class="t1">
-                <h4>Suresh</h4>
-                <p>Very good and committed people. What I like the most is that they Worked for us very passionately.
-                    Well done mam.</p>
-            </div>
-            <div class="t1">
-                <h4>Bhavna</h4>
-                <p>I got the best Interior Designer in Pune. Prerna's Interior Design Service offered me the best layout
-                    along with the best
-                    designs for my office space. I would recommend Prerna Interior Design Service for commercial
-                    interior designing services
-                    in Pune.</p>
-            </div>
-            <div class="t1">
-                <h4>Sudhir</h4>
-                <p> Prerna's Interior Design Service has given us very space-saving designs & cost-effective means to
+            <div class="testimonial">
+                <img src="images/boy.jpg" alt="Client 2">
+                <h3>Sudhir</h3>
+                <p>Prerna's Interior Design Service has given us very space-saving designs & cost-effective means to
                     furnish our office & training infra. I highly recommend their work!!</p>
             </div>
-
-        </div>
-    </section>
-    <section id="contact">
-        <h1>Contact Us</h1>
-        <div class="contact">
-            <div class="c1">
-                <form>
-                    <input type="text" placeholder="Enter Your Full Name" required>
-                    <input type="number" placeholder="Contact Number" required>
-                    <input type="email" placeholder="EmailID" required>
-                    <input type="text" placeholder="Country Name" required>
-                    <textarea rows="5" placeholder="Comments or Questions" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
+            <div class="testimonial">
+                <img src="images/bhavna.jpg" alt="Client 3">
+                <h3>Bhavna</h3>
+                <p>I got the best Interior Designer in Pune. Prerna's Interior Design Service offered me the best layout
+                    along with the best designs for my office space. I would recommend Prerna Interior Design Service
+                    for commercial interior designing services in Pune..</p>
             </div>
         </div>
+    </section>
 
+    <section id="contacts">
+        <h2>Contact US</h2>
+        <form>
+            <div class="form">
+                <label>Full Name</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-phone">
+                <div class="form">
+                    <label>Phone</label>
+                    <input type="tel" id="phone" placeholder="Your phone number">
+                </div>
+            </div>
+            <div class="form">
+                <label>Message</label>
+                <textarea id="message" placeholder="Type your message here..." required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </section>
     <footer>
-        <div class="social-link">
-            <a href="https://www.facebook.com/"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
-            <a href="https://x.com/"><img src="images/icon-twitter.svg" alt="Twitter"></a>
-            <a href="https://in.pinterest.com/"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
-            <a href="https://www.instagram.com/"><img src="images/icon-instagram.svg" alt="Instagram"></a>
-        </div>
-        <p>&copy; Prerna's Interior Design Service. All Right Reserved.</p>
+        <div class="footer">
+            <div class="f1" id="bottom">
+                <p> Copyright &copy; 2024 All rights reserved.</p>
+            </div>
     </footer>
+
+
+
+
 </body>
 
 </html>
