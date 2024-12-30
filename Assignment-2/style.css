@@ -15,7 +15,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 5px;
-    z-index: 8;
+    z-index: 3;
 }
 
 .nav-main {
@@ -31,7 +31,7 @@
 
 .nav-logo img {
     position: relative;
-    right: 1.7rem;
+    right: 1.10rem;
     top: 1rem;
     width: 4rem;
     height: 4rem;
@@ -57,17 +57,16 @@
 .brand .brand-quote {
     text-decoration: none;
     font-family: 'Satisfy', cursive;
-    font-size: 18px;
+    font-size: 13px;
     text-align: right;
 }
 
 .nav-items {
-    z-index: 10;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     position: fixed;
     bottom: 0;
-    /* left: -200px; */
     height: 100%;
     width: 12.5rem;
     padding: 0 20px;
@@ -177,7 +176,7 @@
 
 #prices .steps {
     position: relative;
-    right: 4rem;
+    right: 1rem;
 }
 
 .steps {
@@ -190,14 +189,15 @@
 }
 
 .steps>div>div {
-    height: 17.5rem;
-    width: 17.5rem;
+    height: 16.5rem;
+    width: 16rem;
     border-radius: 50%;
     margin: 10px auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
 
 }
 
@@ -205,35 +205,26 @@
     position: relative;
 }
 
-/* .steps div div .image {
-    height: 9.3rem;
-    width: 9.3rem;
-} */
-
 
 .steps .step1 {
-    /* background-color: #FFEEF2; */
     background-color: rgb(255, 249, 236);
     border: 1px solid goldenrod;
 
 }
 
 .steps .step2 {
-    /* background-color: #FFE4F3; */
     background-color: rgb(255, 249, 236);
     border: 1px solid goldenrod;
 
 }
 
 .steps .step3 {
-    /* background-color: #FFC8FB; */
     background-color: rgb(255, 249, 236);
     border: 1px solid goldenrod;
 
 }
 
 .steps .step4 {
-    /* background-color: #FF92C2; */
     background-color: rgb(255, 249, 236);
     border: 1px solid goldenrod;
 
@@ -244,7 +235,7 @@
 }
 
 .steps div>div>p {
-    position: absolute;
+    position: relative;
     bottom: 10px;
     color: black;
 }
@@ -257,6 +248,7 @@
 .steps b {
     font-size: 1rem;
 }
+
 
 #price a {
     /* color: greenyellow; */
@@ -309,18 +301,12 @@
     color: #333;
 }
 
-/* .testimonial-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.2rem;
-} */
+
 .testimonial-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.2rem;
-    /* position: relative; */
-    /* left: 3rem; */
-    /* width: 70rem; */
+
 }
 
 .testimonial {
@@ -347,7 +333,6 @@
 .testimonial p {
     font-size: 1rem;
     color: rgb(129, 119, 119);
-    /* line-height: 1.5; */
 }
 
 
@@ -498,7 +483,26 @@ footer {
 
     #menu-toggle:checked~.nav-items {
         display: flex;
-        z-index: 10;
+        z-index: 3;
+    }
+
+
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (min-width:770px)and (max-width:991px) {
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    #menu-toggle:checked~.nav-items {
+        display: flex;
+        z-index: 3;
     }
 
 
@@ -582,12 +586,17 @@ footer {
 
     }
 
+    .steps>div>div {
+        height: 18.5rem;
+        width: 14rem;
+    }
+
     .nav-main .brand .brand-name {
         font-size: 1.5rem;
     }
 
     .nav-main .brand .brand-quote {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
 
