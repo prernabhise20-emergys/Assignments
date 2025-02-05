@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">To-Do List</div>
+        <div class="input">
+            <div id="errormessage">Invalid Input(only character)</div>
+
+            <div class="row">
+                <input type="text" id="taskNameInput" name="tname" placeholder="Enter Task Name"  minlength="1" maxlength="30" required/>
+                <input type="text" id="taskDescriptionInput" placeholder="Enter Task Description" minlength="1"
+                    maxlength="100" required/>
+            </div>
+            <div class="row">
+                <select id="taskPriorityInput" required>
+                    <option value="" selected>Select Category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Business">Business</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="date" id="taskDateInput" required>
+            </div>
+            <div class="action-buttons">
+                <button class="clear-btn" id="clearAllTasksBtn">Clear All Task</button>
+                <button class="task-btn" id="addTaskBtn">Add Task</button>
+            </div>
+        </div>
+        <div class="partition"></div>
+        <div class="filter">
+            <select id="sortingDropdown" class="sorting-dropdown">
+                <option value="default">Sort By</option>
+                <option value="alphabetical">A-Z</option>
+                <option value="alphabetical-desc">Z-A</option>
+                <option value="date">Date</option>
+            </select>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search Your Task Here...">
+            </div>
+        </div>
+        <div class="status">
+            <div class="status-tab active" data-filter="all">All</div>
+            <div class="status-tab" data-filter="pending">Pending</div>
+            <div class="status-tab" data-filter="completed">Completed</div>
+        </div>
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+    <div id="popup" class="modal">
+        <div class="content">
+            <h2 id="PName"></h2>
+            <p id="PDesc"></p>
+            <p id="PCategory"></p>
+            <p id="PDate"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
